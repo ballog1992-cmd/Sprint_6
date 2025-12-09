@@ -17,7 +17,6 @@ class LoginPageLocators:
     TELEPHONE = (By.XPATH, "//input[@placeholder='* Телефон: на него позвонит курьер']")
     # Кнопка подтверждения заказа
     BUTTON_SUCCESESS_LOGIN = (By.XPATH, "//button[contains(text(), 'Далее')]")
-    
 
     # Окно аренды самоката
     # Поле с выбором даты
@@ -31,9 +30,9 @@ class LoginPageLocators:
     # Чекбокс цвета самоката
     SCOOTER_COLOR_CHECKBOX = (By.XPATH, '//input[@id="black"]')
     # Поле с комментариями для курьера
-    COMMENT_FIELD_COURIER = (By.XPATH, "//input[@placeholder='Комментарий для курьера']")
+    COMMENT_FIELD_COURIER = (By.XPATH,"//input[@placeholder='Комментарий для курьера']")
     # Кнопка заказать
-    BUTTON_SUCCESESS_RENT_DESIGN = (By.XPATH, "//div[@class='Order_Buttons__1xGrp']//button[@class='Button_Button__ra12g Button_Middle__1CSJM']")
+    BUTTON_SUCCESESS_RENT_DESIGN = (By.XPATH,"//div[@class='Order_Buttons__1xGrp']//button[@class='Button_Button__ra12g Button_Middle__1CSJM']")
     # Кнопка подтверждения аренды
     BUTTON_SUCCESESS_ORDER_DESIGN = (By.XPATH, "//button[contains(text(), 'Да')]")
     # Попап подтверждения заказа

@@ -19,7 +19,6 @@ class OrderPage(BasePage):
         self.click_on_element(LoginPageLocators.METRO)
         station = self.wait_for_element(LoginPageLocators.OPTIONS_CONTAINER)
         station.click()
-        
 
     @allure.step("Подтверждаем заказ")
     def button_succesful_in_order(self):
@@ -32,6 +31,7 @@ class OrderPage(BasePage):
         self.send_keys_to_input(LoginPageLocators.DATE, date)
         self.send_keys_to_input(LoginPageLocators.COMMENT_FIELD_COURIER, text)
         self.click_on_element(LoginPageLocators.DATE_CALENDAR)
+
     @allure.step("Выбор срока аренды")
     def random_rent(self):
         self.click_on_element(LoginPageLocators.LIST_RENTAL_PERIODS)
@@ -41,11 +41,11 @@ class OrderPage(BasePage):
     @allure.step("Выбор цвета самоката")
     def scooter_color(self):
         self.click_on_element(LoginPageLocators.SCOOTER_COLOR_CHECKBOX)
-    
+
     @allure.step("Клик по кнопке подверждения аренды")
     def succeses_button_rent(self):
-       self.click_on_element(LoginPageLocators.BUTTON_SUCCESESS_RENT_DESIGN)
+        self.click_on_element(LoginPageLocators.BUTTON_SUCCESESS_RENT_DESIGN)
+
     @allure.step("Клик по кнопке подверждения заказа")
     def succeses_button_order_rent(self):
-       self.click_on_element(LoginPageLocators.BUTTON_SUCCESESS_ORDER_DESIGN)
-    
+        self.click_on_element(LoginPageLocators.BUTTON_SUCCESESS_ORDER_DESIGN)

@@ -2,7 +2,8 @@ import pytest
 import allure
 from pages.FAQ_section import FAQSection
 from data import TextOfQuestionsInFAQSection, TextOfAnswersInFAQSection
-import time
+from locators.FAQ_section_locators import FAQSectionLocatorsItem
+
 
 @allure.feature("Раздел FAQ - Вопросы о главном")
 class TestFAQSection:
@@ -15,7 +16,9 @@ class TestFAQSection:
     def test_question_headings_text(self, driver, number, expected_text):
         faq_page = FAQSection(driver)
         faq_page.scroll_to_faq_section()
-        time.sleep(1)
+        faq_page.waiting_accordion_appear_with_questions(
+            FAQSectionLocatorsItem.FAQ_ACCORDION
+        )
         actual_text = faq_page.get_question_text(number)
         assert actual_text == expected_text
 
@@ -27,7 +30,9 @@ class TestFAQSection:
     def test_answers_text(self, driver, number, expected_text):
         faq_page = FAQSection(driver)
         faq_page.scroll_to_faq_section()
-        time.sleep(1)
+        faq_page.waiting_accordion_appear_with_questions(
+            FAQSectionLocatorsItem.FAQ_ACCORDION
+        )
         faq_page.click_question(number)
         actual_text = faq_page.get_answer_text(number)
         assert actual_text == expected_text

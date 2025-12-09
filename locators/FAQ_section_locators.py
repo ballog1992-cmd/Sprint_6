@@ -1,11 +1,13 @@
 from selenium.webdriver.common.by import By
 
 
-class FAQ_Section_Locators:
+class FAQSectionLocatorsItem:
 
     # Секция "Вопросы о главном"
     QUESTIONS_SECTION = (By.XPATH, "//div[@class='Home_FourPart__1uthg']")
     # FAQ заголовки вопросов
+    # Блок аккордиона с вопросами
+    FAQ_ACCORDION = (By.XPATH, "//div[@class='accordion']")
 
     @staticmethod
     def question_headings(number):
